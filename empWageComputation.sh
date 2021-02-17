@@ -46,3 +46,21 @@ no_of_Hr=100
 wage_per_month_for_100 Hr=$((wage_per_day * no_of_days_per_month * no_of_Hr))
 echo " The wage of employee for month is $wage_per_month_for_100 Hr"
 
+	# write function to get no of hr
+
+get_work_hrs ()
+{
+    emp_attendence=$1
+     case $emp_attendence in 
+        0)
+            no_of_hrs_per_day=0
+            ;;
+        1)
+            no_of_hrs_per_day=8
+            ;;
+        2)
+            no_of_hrs_per_day=4
+            ;;
+    esac
+    echo "$no_of_hrs_per_day"
+
